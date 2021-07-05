@@ -13,12 +13,18 @@ import lombok.Data;
 public class Cliente {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	@Column(nullable = false)
 	private String nome;
+	
+	public Cliente() {
+		
+	}
+	
+	public Cliente(String nome) {
+		this.nome = nome;
+	}
 
-	
-	
 }
