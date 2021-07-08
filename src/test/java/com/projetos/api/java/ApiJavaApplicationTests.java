@@ -63,10 +63,8 @@ class ApiJavaApplicationTests {
     	
     	Cliente cliente = new Cliente("TesteRemover");
 
-        mockMvc.perform(delete("/clientes")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(toJson(cliente)))
-                .andExpect(content().string(containsString("Delete Sucess!")));
+        mockMvc.perform(delete("/clientes/1")
+                .contentType(MediaType.APPLICATION_JSON));
     }
     
     private String toJson(final Object obj) {
