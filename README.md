@@ -26,17 +26,25 @@ As rotas necessárias para os testes são:
   
     ```code
       {
-        "nome" : "Seu nome aqui"
+        "nome" : "Seu nome aqui",
+        "email": "seuemail@example.com",
+        "telefone" : "99 99999-9999",
+        "cpfcnpj" : "XXXXXXXXXXX",
+        "endereco" : "Seu endereço aqui"
       }
       ```
   * GET para listar os registros inseridos: localhost:8080/clientes
-  * DELETE para deletar algum registro inserido anteriormente: localhost:8080/clientes/{id}, passando como parâmetro na url o id que deseja excluir
-   * PUT Para alterar algum registro inserido anteriormente: localhost:8080/clientes, enviando como JSON a seguinte estrutura:
+  * GET para listar as informações de um registro específico: localhost:8080/clientes/{ id }, passando como parâmetro na url o id que deseja listar
+  * DELETE para deletar algum registro inserido anteriormente: localhost:8080/clientes/{ id }, passando como parâmetro na url o id que deseja excluir
+  * PUT Para alterar algum registro inserido anteriormente: localhost:8080/clientes/{ id }, passando como parâmetro na url o id que deseja alterar, e enviando como JSON a seguinte estrutura:
    
       ```code
       {
-        "id" : "Id a ser alterado",
-        "nome" : "Novo nome aqui"
+        "nome" : "Novo nome aqui",
+        "email": "novoemail@example.com",
+        "telefone" : "novo telefone",
+        "cpfcnpj" : "novo cpf/cnpj",
+        "endereco" : "novo endereço"
       }
       ```
 
