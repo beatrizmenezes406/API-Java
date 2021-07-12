@@ -30,15 +30,8 @@ As rotas necessárias para os testes são:
       }
       ```
   * GET para listar os registros inseridos: localhost:8080/clientes
-  * DELETE para deletar algum registro inserido anteriormente, enviando como JSON a seguinte estrutura: 
-  
-    ```code
-      {
-        "id" : "Id a ser removido",
-        "nome" : "Seu nome aqui"
-      }
-      ```
-   * PUT Para alterar algum registro inserido anteriormente, enviando como JSON a seguinte estrutura:
+  * DELETE para deletar algum registro inserido anteriormente: localhost:8080/clientes/{id}, passando como parâmetro na url o id que deseja excluir
+   * PUT Para alterar algum registro inserido anteriormente: localhost:8080/clientes, enviando como JSON a seguinte estrutura:
    
       ```code
       {
