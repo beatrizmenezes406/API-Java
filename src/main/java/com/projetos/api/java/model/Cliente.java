@@ -13,11 +13,15 @@ import lombok.Data;
 public class Cliente {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column(nullable = false)
 	private String nome;
+	private String email;
+	private String telefone;
+	private String cpfcnpj;
+	private String endereco;
 	
 	public Cliente() {
 		
