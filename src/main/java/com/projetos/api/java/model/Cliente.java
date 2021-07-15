@@ -23,12 +23,6 @@ public class Cliente {
 	private String cpfcnpj;
 	private String endereco;
 	
-	public Cliente() {
-		
-	}
 	
-	public Cliente(String nome) {
-		this.nome = nome;
-	}
 
 }
